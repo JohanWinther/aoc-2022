@@ -8,6 +8,7 @@ for ((day=1; day <= today; day++))
 do
     {
         mkdir "day$day";
+        mkdir "day$day/site";
         wget -nc --header="Cookie: session=$session" -O "day$day/input.txt" "$domain/$year/day/$day/input" ;
     } || true
 done
